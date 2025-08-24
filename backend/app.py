@@ -133,5 +133,10 @@ def logout():
     session.pop('refresh_token', None)
     return "Logged out. <a href='/login'>Login again</a>"
 
+@app.route('/health')
+def health():
+    return 'ok', 200
+
+
 if __name__ == '__main__':
     app.run(debug=True)
